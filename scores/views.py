@@ -8,8 +8,13 @@ def index(request):
 
 def fixtures(request):
     fixtures = Fixture.objects.all()
+
+
+    # check if all are completed the game is FT
+    all_completed = all(f.game_finished for f in fixtures)
     context = {
-        'fixtures': fixtures
+        'fixtures': fixtures,
+        'all_completed': all_completed
 
     }
     if request.htmx:
