@@ -12,4 +12,4 @@ def fixtures(request):
         'fixtures': fixtures
 
     }
-    return render(request, 'partials/fixtures.html', context)
+    return render(request, 'fixtures.html', context)
