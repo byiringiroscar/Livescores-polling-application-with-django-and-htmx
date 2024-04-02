@@ -12,4 +12,6 @@ def fixtures(request):
         'fixtures': fixtures
 
     }
+    if request.htmx:
+        return render(request, 'partials/fixturelist.html', context)
     return render(request, 'fixtures.html', context)
