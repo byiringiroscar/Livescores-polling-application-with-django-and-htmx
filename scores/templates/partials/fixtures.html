@@ -4,5 +4,18 @@
 {% block content %}
   <main>
     <h2>{{ fixtures.first.tournament.name }} scores & Fixtures</h2>
+    <form class="input-group my-4">
+        <input type="text"
+               id="search-input"
+               name="search" 
+               class="form-control" 
+               placeholder="Enter team" />
+
+        <span class="input-group-text border-0 bg-transparent" 
+              id="search-addon" 
+              style="cursor: pointer;">
+            <i class="bi bi-search"></i>
+        </span>
+    </form>
   </main>
 {% endblock content %}
